@@ -28,7 +28,7 @@ const styles = {
   }
 };
 
-class IlMondoInGiocoAppBar extends Component {
+class AppBar extends Component {
   state = {
     eh: false,
     info: false
@@ -66,4 +66,4 @@ class IlMondoInGiocoAppBar extends Component {
   }
 }
 
-export default IlMondoInGiocoAppBar;
+export default AppBar;

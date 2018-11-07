@@ -5,7 +5,7 @@ import "./App.css";
 
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
-import IlMondoInGiocoAppBar from "./components/IlMondoInGiocoAppBar";
+import AppBar from "./components/AppBar";
 
 const theme = createMuiTheme({
   palette: {
@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
-        <IlMondoInGiocoAppBar />
+        <AppBar />
       </MuiThemeProvider>
     );
   }

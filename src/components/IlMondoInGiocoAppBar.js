@@ -3,10 +3,8 @@ import React, { Component } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
 
-import Modal from "@material-ui/core/Modal";
+import Main from "./Main";
 
 const styles = {
   root: {
@@ -31,21 +29,38 @@ const styles = {
 };
 
 class IlMondoInGiocoAppBar extends Component {
+  state = {
+    eh: false,
+    info: false
+  };
+
+  handleOpenEh = () => {
+    this.setState({ eh: true });
+  };
+
+  handleCloseEh = () => {
+    this.setState({ eh: false });
+  };
+
+  handleOpenInfo = () => {
+    this.setState({ info: true });
+  };
+
+  handleCloseInfo = () => {
+    this.setState({ info: false });
+  };
+
   render() {
     return (
       <div style={styles.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
-              onClick={this.handleOpenInfo}
-              style={styles.menuButton}
-              color="inherit"
-              aria-label="Menu"
-            >
-              <img src="images/bolt.png" width={48} alt="tiportoviacon.me" />
-            </IconButton>
+            <Typography variant="title" color="inherit" style={styles.flex}>
+              {"Il mondo in gioco"}
+            </Typography>
           </Toolbar>
         </AppBar>
+        <Main />
       </div>
     );
   }

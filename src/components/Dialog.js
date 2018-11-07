@@ -33,23 +33,16 @@ class MDialog extends React.Component {
           onClose={this.handleClose}
           aria-labelledby="responsive-dialog-title"
         >
-          <DialogTitle id="responsive-dialog-title">
-            {"Use Google's location service?"}
-          </DialogTitle>
           <DialogContent>
-            <DialogContentText>
-              Let Google help apps determine location. This means sending
-              anonymous location data to Google, even when no apps are running.
-            </DialogContentText>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/qM9zMgbVlFQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
           </DialogContent>
-          <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
-              Disagree
-            </Button>
-            <Button onClick={this.handleClose} color="primary" autoFocus>
-              Agree
-            </Button>
-          </DialogActions>
         </Dialog>
       </div>
     );

@@ -4,8 +4,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
-import Main from "./Main";
-
 const styles = {
   root: {
     flexGrow: 1
@@ -28,7 +26,7 @@ const styles = {
   }
 };
 
-class AppBar extends Component {
+class MAppBar extends Component {
   state = {
     eh: false,
     info: false
@@ -60,10 +58,9 @@ class AppBar extends Component {
             </Typography>
           </Toolbar>
         </AppBar>
-        <Main />
       </div>
     );
   }
 }
 
-export default AppBar;
+export default MAppBar;

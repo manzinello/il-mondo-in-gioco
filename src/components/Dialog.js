@@ -8,7 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import withMobileDialog from "@material-ui/core/withMobileDialog";
 
-class Dialog extends React.Component {
+class MDialog extends React.Component {
   state = {
     open: false
   };
@@ -60,4 +60,4 @@ Dialog.propTypes = {
   fullScreen: PropTypes.bool.isRequired
 };
 
-export default withMobileDialog()(Dialog);
+export default withMobileDialog()(MDialog);

@@ -6,6 +6,8 @@ import "./App.css";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
 import AppBar from "./components/AppBar";
+import Main from "./components/Main";
+import Dialog from "./components/Dialog";
 
 const theme = createMuiTheme({
   palette: {
@@ -30,6 +32,8 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <AppBar />
+        <Main />
+        <Dialog />
       </MuiThemeProvider>
     );
   }

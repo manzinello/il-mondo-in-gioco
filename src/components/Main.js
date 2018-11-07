@@ -83,7 +83,14 @@ function Main(props) {
         className={classes.gridList}
       >
         {tileData.map(tile => (
-          <GridListTile key={tile.img} cols={1} rows={1}>
+          <GridListTile
+            key={tile.img}
+            cols={1}
+            rows={1}
+            onClick={() => {
+              props.handleVideo("video");
+            }}
+          >
             <img src={tile.img} alt={tile.title} />
             <GridListTileBar
               title={tile.title}

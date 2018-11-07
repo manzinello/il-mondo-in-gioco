@@ -1,20 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import withMobileDialog from "@material-ui/core/withMobileDialog";
 
 class MDialog extends React.Component {
   state = {
     open: false
-  };
-
-  handleClickOpen = () => {
-    this.setState({ open: true });
   };
 
   handleClose = () => {
@@ -26,10 +18,9 @@ class MDialog extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.handleClickOpen}>Open responsive dialog</Button>
         <Dialog
           fullScreen={fullScreen}
-          open={this.state.open}
+          open={this.props.open}
           onClose={this.handleClose}
           aria-labelledby="responsive-dialog-title"
         >
@@ -37,7 +28,7 @@ class MDialog extends React.Component {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/qM9zMgbVlFQ"
+              src={this.props.video}
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen

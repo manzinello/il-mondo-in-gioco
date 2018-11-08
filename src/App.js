@@ -7,7 +7,6 @@ import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
 import AppBar from "./components/AppBar";
 import Main from "./components/Main";
-import MDialog from "./components/MDialog";
 
 const theme = createMuiTheme({
   palette: {
@@ -49,7 +48,6 @@ class App extends Component {
         <CssBaseline />
         <AppBar />
         <Main handleVideo={this.handleVideo} />
-        <MDialog open={this.state.open} video={this.state.video} />
       </MuiThemeProvider>
     );
   }

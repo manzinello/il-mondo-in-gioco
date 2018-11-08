@@ -5,6 +5,8 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 
+import MDialog from "./MDialog";
+
 const styles = theme => ({
   root: {
     display: "flex",
@@ -101,6 +103,7 @@ function Main(props) {
           </GridListTile>
         ))}
       </GridList>
+      <MDialog open={true} />
     </div>
   );
 }

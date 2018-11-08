@@ -14,12 +14,9 @@ class MDialog extends React.Component {
   };
 
   render() {
-    const { fullScreen } = this.props;
-
     return (
       <div>
         <Dialog
-          fullScreen={fullScreen}
           open={this.props.open}
           onClose={this.handleClose}
           aria-labelledby="responsive-dialog-title"

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Attraction, Car } from "grommet-icons";
 
-import { Grommet, Anchor, Box, Button, Grid, Text } from "grommet";
+import { Grommet, Anchor, Box, Button, Text } from "grommet";
 
 const SimpleBox = () => (
-  <Grommet>
+  <Grommet full>
     <Box
       direction="row-responsive"
       justify="center"
@@ -22,6 +22,30 @@ const SimpleBox = () => (
       >
         <Attraction size="large" />
         <Text>Party</Text>
+        <Anchor href="" label="Link" />
+        <Button label="Button" onClick={() => {}} />
+      </Box>
+      <Box pad="large" align="center" background="dark-3" round gap="small">
+        <Car size="large" color="light-2" />
+        <Text>Travel</Text>
+        <Anchor href="" label="Link" />
+        <Button label="Button" onClick={() => {}} />
+      </Box>
+      <Box pad="large" align="center" background="dark-3" round gap="small">
+        <Car size="large" color="light-2" />
+        <Text>Travel</Text>
+        <Anchor href="" label="Link" />
+        <Button label="Button" onClick={() => {}} />
+      </Box>
+      <Box pad="large" align="center" background="dark-3" round gap="small">
+        <Car size="large" color="light-2" />
+        <Text>Travel</Text>
+        <Anchor href="" label="Link" />
+        <Button label="Button" onClick={() => {}} />
+      </Box>
+      <Box pad="large" align="center" background="dark-3" round gap="small">
+        <Car size="large" color="light-2" />
+        <Text>Travel</Text>
         <Anchor href="" label="Link" />
         <Button label="Button" onClick={() => {}} />
       </Box>

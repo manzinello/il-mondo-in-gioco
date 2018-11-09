@@ -1,29 +1,39 @@
 import React, { Component } from "react";
+import { Attraction, Car } from "grommet-icons";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
-import "./App.css";
+import { Grommet, Anchor, Box, Button, Grid, Text } from "grommet";
 
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-
-import AppBar from "./components/AppBar";
-import Main from "./components/Main";
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: "#1E88E5",
-      main: "#D64D6D",
-      dark: "#1565C0",
-      contrastText: "#fff"
-    },
-    secondary: {
-      light: "#F4511E",
-      main: "#D84315",
-      dark: "#BF360C",
-      contrastText: "#fff"
-    }
-  }
-});
+const SimpleBox = () => (
+  <Grommet>
+    <Box
+      direction="row-responsive"
+      justify="center"
+      align="center"
+      pad="xlarge"
+      background="dark-2"
+      gap="medium"
+    >
+      <Box
+        pad="large"
+        align="center"
+        background={{ color: "light-2", opacity: "strong" }}
+        round
+        gap="small"
+      >
+        <Attraction size="large" />
+        <Text>Party</Text>
+        <Anchor href="" label="Link" />
+        <Button label="Button" onClick={() => {}} />
+      </Box>
+      <Box pad="large" align="center" background="dark-3" round gap="small">
+        <Car size="large" color="light-2" />
+        <Text>Travel</Text>
+        <Anchor href="" label="Link" />
+        <Button label="Button" onClick={() => {}} />
+      </Box>
+    </Box>
+  </Grommet>
+);
 
 class App extends Component {
   state = {
@@ -31,24 +41,11 @@ class App extends Component {
     video: "https://www.youtube.com/embed/qM9zMgbVlFQ"
   };
 
-  handleVideo = video => {
-    this.setState(
-      {
-        video
-      },
-      () => {
-        this.setState({ open: true });
-      }
-    );
-  };
-
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        <AppBar />
-        <Main handleVideo={this.handleVideo} />
-      </MuiThemeProvider>
+      <>
+        <SimpleBox />
+      </>
     );
   }
 }

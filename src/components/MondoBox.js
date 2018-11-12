@@ -10,7 +10,7 @@ class MondoBox extends React.Component {
         background={{
           color: "neutral-1",
           dark: true,
-          opacity: 'weak',
+          opacity: "weak",
           position: "bottom",
           image: "url(images/" + this.props.backgroundImage + ")"
         }}

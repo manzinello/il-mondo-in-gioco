@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Grommet, Box, Text, Video } from "grommet";
+import { Grommet, Box, Text, Video, Layer, Button, Heading } from "grommet";
 import MondoBox from "./components/MondoBox";
 
 const giochi = [
@@ -37,8 +37,12 @@ const giochi = [
 ];
 
 class App extends Component {
+  onOpen = () => this.setState({ open: true });
+
+  onClose = () => this.setState({ open: undefined });
+
   state = {
-    open: false,
+    open: undefined,
     video: "https://www.youtube.com/embed/qM9zMgbVlFQ"
   };
 
@@ -46,6 +50,35 @@ class App extends Component {
     return (
       <>
         <Grommet full>
+          {this.state.open && (
+            <Layer
+              position="center"
+              modal
+              onClickOutside={this.onClose}
+              onEsc={this.onClose}
+            >
+              <Box pad="medium" gap="small" width="medium">
+                <Video>
+                  <source
+                    src="http://techslides.com/demos/sample-videos/small.webm"
+                    type="video/webm"
+                  />
+                  <source
+                    src="http://techslides.com/demos/sample-videos/small.ogv"
+                    type="video/ogg"
+                  />
+                  <source
+                    src="http://techslides.com/demos/sample-videos/small.mp4"
+                    type="video/mp4"
+                  />
+                  <source
+                    src="http://techslides.com/demos/sample-videos/small.3gp"
+                    type="video/3gp"
+                  />
+                </Video>
+              </Box>
+            </Layer>
+          )}
           <Box background="dark-2" fill>
             <Box
               direction="row-responsive"
@@ -58,6 +91,7 @@ class App extends Component {
             >
               {giochi.map(gioco => (
                 <MondoBox
+                  onClick={this.onOpen}
                   backgroundImage={gioco.backgroundImage}
                   gioco={gioco.gioco}
                   num={gioco.num}

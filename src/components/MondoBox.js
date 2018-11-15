@@ -6,6 +6,7 @@ class MondoBox extends React.Component {
     return (
       <Box
         pad="large"
+        onClick={this.props.handlePressBox}
         align="center"
         background={{
           color: "neutral-1",

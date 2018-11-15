@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Grommet, Box, Text } from "grommet";
+import { Grommet, Box, Text, Video } from "grommet";
 import MondoBox from "./components/MondoBox";
 
 const giochi = [
@@ -47,9 +47,6 @@ class App extends Component {
       <>
         <Grommet full>
           <Box background="dark-2" fill>
-            <Box>
-              <Text>Ciao</Text>
-            </Box>
             <Box
               direction="row-responsive"
               justify="center"

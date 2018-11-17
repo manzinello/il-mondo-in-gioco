@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Grommet, Box, Text, Video, Layer, Button, Heading } from "grommet";
+import { Grommet, Box, Video, Layer } from "grommet";
 import MondoBox from "./components/MondoBox";
 
 const giochi = [
@@ -44,6 +44,10 @@ class App extends Component {
   state = {
     open: undefined,
     video: "https://www.youtube.com/embed/qM9zMgbVlFQ"
+  };
+
+  handlePress = num => {
+    console.log(num);
   };
 
   render() {
@@ -91,6 +95,7 @@ class App extends Component {
             >
               {giochi.map(gioco => (
                 <MondoBox
+                  handlePressBox={this.handlePress}
                   onClick={this.onOpen}
                   backgroundImage={gioco.backgroundImage}
                   gioco={gioco.gioco}

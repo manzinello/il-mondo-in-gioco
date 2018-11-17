@@ -1,12 +1,12 @@
 import React from "react";
-import { Heading, Grommet, Anchor, Box, Button, Text } from "grommet";
+import { Heading, Box, Text } from "grommet";
 
 class MondoBox extends React.Component {
   render = () => {
     return (
       <Box
         pad="large"
-        onClick={this.props.handlePressBox}
+        onClick={() => this.props.handlePressBox(this.props.num)}
         align="center"
         background={{
           color: "neutral-1",
@@ -20,8 +20,6 @@ class MondoBox extends React.Component {
       >
         <Heading level={1}>{this.props.num}</Heading>
         <Text>{this.props.gioco}</Text>
-        <Anchor href="" label="Link" />
-        <Button label="Button" onClick={() => {}} />
       </Box>
     );
   };

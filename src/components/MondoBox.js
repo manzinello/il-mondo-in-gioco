@@ -19,7 +19,7 @@ class MondoBox extends React.Component {
         gap="small"
       >
         <Heading level={1}>{this.props.num}</Heading>
-        <Text>{this.props.gioco}</Text>
+        <Heading level={2}>{this.props.gioco}</Heading>
       </Box>
     );
   };

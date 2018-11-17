@@ -1,0 +1,27 @@
+{
+  "name": "ilmondoingioco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd client && npm run start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manzinello/ilmondoingioco-video-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manzinello/ilmondoingioco-video-dashboard/issues"
+  },
+  "homepage": "https://github.com/manzinello/ilmondoingioco-video-dashboard#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
+    "onoff": "^3.2.2"
+  }
+}

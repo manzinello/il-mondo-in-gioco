@@ -71,11 +71,8 @@ class App extends Component {
               onEsc={this.onClose}
             >
               <Box pad="medium" gap="small" width="medium">
-                <Video>
-                  <source
-                    src="http://techslides.com/demos/sample-videos/small.mp4"
-                    type="video/mp4"
-                  />
+                <Video loop={true} controls={false} autoPlay={true}>
+                  <source src="/video/small.mp4" type="video/mp4" />
                 </Video>
               </Box>
             </Layer>

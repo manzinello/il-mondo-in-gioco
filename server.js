@@ -5,6 +5,9 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var http = require("http").Server(app);
+var io = require("socket.io")(http);
+
 /*
 var Gpio = require("onoff").Gpio; //include onoff to interact with the GPIO
 var LED = new Gpio(4, "out"); //use GPIO pin 4 as output

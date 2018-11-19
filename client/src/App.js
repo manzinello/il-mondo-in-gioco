@@ -9,11 +9,6 @@ var socket = io("http://localhost:5000", {
   transports: ["websocket"]
 });
 
-socket.on("news", function(data) {
-  console.log(data);
-  socket.emit("my other event", { my: "data" });
-});
-
 const giochi = [
   {
     backgroundImage: "gioco-1.jpg",
@@ -71,21 +66,24 @@ class App extends Component {
   };
 
   componentDidMount() {
+    /*
     this.callApi()
       .then(res => this.setState({ response: res.express }))
       .catch(err => console.log(err));
-    socket.on("connect", function() {
-      console.log("Connected!");
+    */
+    socket.on("button-pressed", data => {
+      console.log(data);
+      this.setState({ selected: data });
     });
-    socket.on("event", function(data) {});
-    socket.on("disconnect", function() {});
   }
+
   callApi = async () => {
     const response = await fetch("/api/hello");
     const body = await response.json();
     if (response.status !== 200) throw Error(body.message);
     return body;
   };
+
   handleSubmit = async e => {
     e.preventDefault();
     const response = await fetch("/api/world", {

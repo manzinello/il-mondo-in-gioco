@@ -8,6 +8,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var http = require("http").Server(app);
 var io = require("socket.io")(http);
 
+io.on("connection", function(socket) {
+  socket.emit("news", { hello: "world" });
+  socket.on("my other event", function(data) {
+    console.log(data);
+  });
+});
+
 /*
 var Gpio = require("onoff").Gpio; //include onoff to interact with the GPIO
 var LED = new Gpio(4, "out"); //use GPIO pin 4 as output
@@ -24,7 +31,9 @@ app.post("/api/world", (req, res) => {
   );
 });
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+http.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
 
 /*
   start = () => {

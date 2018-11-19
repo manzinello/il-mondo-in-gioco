@@ -3,6 +3,17 @@ import React, { Component } from "react";
 import { Grommet, Box, Video, Layer } from "grommet";
 import MondoBox from "./components/MondoBox";
 
+import io from "socket.io-client";
+
+var socket = io("http://localhost:5000", {
+  transports: ["websocket"]
+});
+
+socket.on("news", function(data) {
+  console.log(data);
+  socket.emit("my other event", { my: "data" });
+});
+
 const giochi = [
   {
     backgroundImage: "gioco-1.jpg",
@@ -63,6 +74,11 @@ class App extends Component {
     this.callApi()
       .then(res => this.setState({ response: res.express }))
       .catch(err => console.log(err));
+    socket.on("connect", function() {
+      console.log("Connected!");
+    });
+    socket.on("event", function(data) {});
+    socket.on("disconnect", function() {});
   }
   callApi = async () => {
     const response = await fetch("/api/hello");

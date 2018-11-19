@@ -52,7 +52,7 @@ class App extends Component {
     video: "https://www.youtube.com/embed/qM9zMgbVlFQ"
   };
 
-  handlePress = num => {
+  switchVideo = num => {
     switch (num) {
       case 1:
       default:
@@ -65,10 +65,14 @@ class App extends Component {
     }
   };
 
+  handlePress = num => {
+    this.switchVideo(num);
+  };
+
   componentDidMount() {
     socket.on("button-pressed", data => {
       console.log(data);
-      this.setState({ selected: data });
+      this.switchVideo(data.value);
     });
   }
 

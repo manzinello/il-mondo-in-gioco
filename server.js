@@ -10,7 +10,7 @@ var io = require("socket.io")(http);
 
 sendButtonPressed = v => {
   io.on("connection", function(socket) {
-    socket.emit("button-pressed", { button: v });
+    socket.emit("button-pressed", { value: v });
   });
 };
 

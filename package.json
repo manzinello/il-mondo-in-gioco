@@ -20,7 +20,7 @@
   "homepage": "https://github.com/manzinello/ilmondoingioco-video-dashboard#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "concurrently": "^4.0.1",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "http": "0.0.0",
     "onoff": "^3.2.2",

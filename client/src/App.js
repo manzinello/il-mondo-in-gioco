@@ -49,19 +49,16 @@ class App extends Component {
 
   state = {
     open: undefined,
-    video: "https://www.youtube.com/embed/qM9zMgbVlFQ"
+    video: null
   };
 
   switchVideo = num => {
     switch (num) {
       case 1:
       default:
-        this.setState(
-          { video: "https://www.youtube.com/embed/qM9zMgbVlFQ" },
-          () => {
-            this.setState({ open: true });
-          }
-        );
+        this.setState({ video: "/video/small.mp4" }, () => {
+          this.setState({ open: true });
+        });
     }
   };
 
@@ -71,7 +68,7 @@ class App extends Component {
 
   componentDidMount() {
     socket.on("button-pressed", data => {
-      console.log(data);
+      console.log(new Date().getTime() + " " + data);
       this.switchVideo(data.value);
     });
   }
@@ -80,7 +77,7 @@ class App extends Component {
     return (
       <>
         <Grommet full>
-          {this.state.open && (
+          {this.state.open && this.state.video && (
             <Layer
               position="center"
               modal
@@ -89,7 +86,7 @@ class App extends Component {
             >
               <Box pad="medium" gap="small" width="medium">
                 <Video loop={true} controls={false} autoPlay={true}>
-                  <source src="/video/small.mp4" type="video/mp4" />
+                  <source src={this.state.video} type="video/mp4" />
                 </Video>
               </Box>
             </Layer>

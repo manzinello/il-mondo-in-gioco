@@ -2,15 +2,17 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const port = process.env.PORT || 5000;
+
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var http = require("http").Server(app);
-var io = require("socket.io")(http);
-
-sendButtonPressed = v => {
-  io.on("connection", function(socket) {
-    socket.emit("button-pressed", { value: v });
+socketInit = () => {
+  console.log("button-pressed! " + 3);
+  io.on("connection", socket => {
+    socket.emit("button-pressed", { value: 3 });
   });
 };
 
@@ -22,7 +24,7 @@ var pushButton = new Gpio(17, "in", "both"); //use GPIO pin 17 as input, and 'bo
 
 http.listen(port, () => {
   console.log(`Listening on port ${port}`);
-  sendButtonPressed(2);
+  socketInit();
 });
 
 /*

@@ -13,32 +13,32 @@ const giochi = [
   {
     backgroundImage: "gioco-1.jpg",
     num: 1,
-    gioco: "Mandala"
+    gioco: "Mancàla"
   },
   {
     backgroundImage: "gioco-2.jpg",
     num: 2,
-    gioco: "Mandala"
+    gioco: "Cerchio"
   },
   {
     backgroundImage: "gioco-3.jpg",
     num: 3,
-    gioco: "Mandala"
+    gioco: "Kendama"
   },
   {
     backgroundImage: "gioco-4.jpg",
     num: 4,
-    gioco: "Mandala"
+    gioco: "Jianzi"
   },
   {
     backgroundImage: "gioco-5.jpg",
     num: 5,
-    gioco: "Mandala"
+    gioco: "Maromero"
   },
   {
     backgroundImage: "gioco-6.jpg",
     num: 6,
-    gioco: "Mandala"
+    gioco: "Boomerang"
   }
 ];
 
@@ -55,6 +55,35 @@ class App extends Component {
   switchVideo = num => {
     switch (num) {
       case 1:
+        this.setState({ video: "/video/gioco-1.mp4" }, () => {
+          this.setState({ open: true });
+        });
+        break;
+      case 2:
+        this.setState({ video: "/video/gioco-2.mp4" }, () => {
+          this.setState({ open: true });
+        });
+        break;
+      case 3:
+        this.setState({ video: "/video/gioco-3.mp4" }, () => {
+          this.setState({ open: true });
+        });
+        break;
+      case 4:
+        this.setState({ video: "/video/gioco-4.mp4" }, () => {
+          this.setState({ open: true });
+        });
+        break;
+      case 5:
+        this.setState({ video: "/video/gioco-5.mp4" }, () => {
+          this.setState({ open: true });
+        });
+        break;
+      case 6:
+        this.setState({ video: "/video/gioco-6.mp4" }, () => {
+          this.setState({ open: true });
+        });
+        break;
       default:
         this.setState({ video: "/video/small.mp4" }, () => {
           this.setState({ open: true });

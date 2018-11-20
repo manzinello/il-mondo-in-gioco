@@ -1,21 +1,21 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+
 const port = process.env.PORT || 5000;
 
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
-var Gpio = require("onoff").Gpio; //include onoff to interact with the GPIO
+const Gpio = require("onoff").Gpio;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 socketInit = () => {
-  console.log("button-pressed! " + 3);
   io.on("connection", socket => {
-    var button1 = new Gpio(4, "in", "falling");
-    var button2 = new Gpio(17, "in", "falling");
+    let button1 = new Gpio(4, "in", "falling");
+    let button2 = new Gpio(17, "in", "falling");
     button1.watch((err, value) => {
       if (err) {
         console.error("There was an error", err);
@@ -35,11 +35,10 @@ socketInit = () => {
   });
 };
 
+//function to run when exiting program
 function unexportOnClose() {
-  //function to run when exiting program
-  LED.writeSync(0); // Turn LED off
-  LED.unexport(); // Unexport LED GPIO to free resources
-  pushButton.unexport(); // Unexport Button GPIO to free resources
+  button1.unexport();
+  button2.unexport();
 }
 
 process.on("SIGINT", unexportOnClose); //function to run when user closes using ctrl+c

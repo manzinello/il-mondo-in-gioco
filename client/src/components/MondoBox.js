@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Box, Text } from "grommet";
+import { Heading, Box } from "grommet";
 
 class MondoBox extends React.Component {
   render = () => {

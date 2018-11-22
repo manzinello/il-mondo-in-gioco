@@ -10,7 +10,7 @@ class MondoBox extends React.Component {
         onClick={() => this.props.handlePressBox(this.props.num)}
         align="center"
         background={{
-          color: "neutral-1",
+          color: "dark-1",
           dark: true,
           opacity: "weak",
           position: "bottom",

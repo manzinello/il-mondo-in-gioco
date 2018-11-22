@@ -114,10 +114,21 @@ class App extends Component {
             <Layer
               position="center"
               modal
+              margin="none"
               onClickOutside={this.onClose}
               onEsc={this.onClose}
             >
-              <Box pad="medium" gap="small" width="medium">
+              <Box
+                fill={true}
+                background={{
+                  color: "dark-1",
+                  dark: true,
+                  position: "bottom"
+                }}
+                pad="medium"
+                gap="small"
+                width="xlarge"
+              >
                 <Video loop={true} controls={false} autoPlay={true}>
                   <source src={this.state.video} type="video/mp4" />
                 </Video>

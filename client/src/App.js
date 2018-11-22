@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Grommet, Box, Video, Layer } from "grommet";
+import { Grommet, Box, Video, Layer, Heading } from "grommet";
 import MondoBox from "./components/MondoBox";
 
 /*

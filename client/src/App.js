@@ -3,11 +3,13 @@ import React, { Component } from "react";
 import { Grommet, Box, Video, Layer } from "grommet";
 import MondoBox from "./components/MondoBox";
 
+/*
 import io from "socket.io-client";
 
 var socket = io("http://localhost:5000", {
   transports: ["websocket"]
 });
+*/
 
 const giochi = [
   {
@@ -96,10 +98,12 @@ class App extends Component {
   };
 
   componentDidMount() {
+    /*
     socket.on("button-pressed", data => {
       console.log(new Date().getTime() + " " + data);
       this.switchVideo(data.value);
     });
+    */
   }
 
   render() {

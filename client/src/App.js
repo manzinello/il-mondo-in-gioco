@@ -135,7 +135,7 @@ class App extends Component {
               </Box>
             </Layer>
           )}
-          <Box background="dark-2" fill>
+          <Box background="dark-1" fill>
             <Box
               direction="row-responsive"
               justify="center"

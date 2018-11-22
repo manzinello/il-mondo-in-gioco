@@ -11,32 +11,32 @@ var socket = io("http://localhost:5000", {
 
 const giochi = [
   {
-    backgroundImage: "gioco-1.jpg",
+    backgroundImage: "1MANCALA.jpg",
     num: 1,
     gioco: "Mancàla"
   },
   {
-    backgroundImage: "gioco-2.jpg",
+    backgroundImage: "2CERCHIO.jpg",
     num: 2,
     gioco: "Cerchio"
   },
   {
-    backgroundImage: "gioco-3.jpg",
+    backgroundImage: "3KENDAMA.jpg",
     num: 3,
     gioco: "Kendama"
   },
   {
-    backgroundImage: "gioco-4.jpg",
+    backgroundImage: "4JIANZI.jpg",
     num: 4,
     gioco: "Jianzi"
   },
   {
-    backgroundImage: "gioco-5.jpg",
+    backgroundImage: "5MAROMERO.jpg",
     num: 5,
     gioco: "Maromero"
   },
   {
-    backgroundImage: "gioco-6.jpg",
+    backgroundImage: "6BOOMERANG.jpg",
     num: 6,
     gioco: "Boomerang"
   }

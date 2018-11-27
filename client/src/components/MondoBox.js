@@ -10,11 +10,8 @@ class MondoBox extends React.Component {
         onClick={() => this.props.handlePressBox(this.props.num)}
         align="center"
         background={{
-          color: "dark-1",
-          dark: true,
-          opacity: "weak",
-          position: "bottom",
-          image: "url(images/" + this.props.backgroundImage + ")"
+          image: "url(images/" + this.props.backgroundImage + ")",
+          opacity: "strong"
         }}
         round
         gap="small"

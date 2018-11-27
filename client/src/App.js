@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Grommet, Box, Video, Layer, Button, Heading } from "grommet";
-import { LinkPrevious, Risk } from "grommet-icons";
+import { LinkPrevious } from "grommet-icons";
 import MondoBox from "./components/MondoBox";
 
 import "./App.css";
@@ -126,7 +126,8 @@ class App extends Component {
                 background={{
                   color: "dark-1",
                   dark: true,
-                  position: "bottom"
+                  position: "bottom",
+                  image: "url(images/background.png)"
                 }}
                 pad="medium"
                 gap="small"
@@ -149,10 +150,12 @@ class App extends Component {
             justify="center"
             align="center"
             alignSelf="center"
-            background="dark-1"
+            background="url(images/background.png)"
             fill
           >
-            <Heading level={1}>il mondo in gioco</Heading>
+            <Heading color="white" level={1}>
+              il mondo in gioco
+            </Heading>
             <Box direction="row-responsive" pad="xlarge" gap="medium" fill>
               {giochi.map(gioco => (
                 <MondoBox
@@ -164,7 +167,7 @@ class App extends Component {
                 />
               ))}
             </Box>
-            <Heading level={3}>
+            <Heading color="white" level={3}>
               <u>ilmondoingioco.betharram.it</u>
             </Heading>
           </Box>

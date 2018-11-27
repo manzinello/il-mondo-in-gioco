@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Grommet, Box, Video, Layer, Button, Heading } from "grommet";
-import { LinkPrevious } from "grommet-icons";
+import { LinkPrevious, Globe, Share } from "grommet-icons";
 import MondoBox from "./components/MondoBox";
 
 import "./App.css";
@@ -168,6 +168,7 @@ class App extends Component {
               ))}
             </Box>
             <Heading color="white" level={3}>
+              <Share size="small" color="white" />{" "}
               <u>ilmondoingioco.betharram.it</u>
             </Heading>
           </Box>

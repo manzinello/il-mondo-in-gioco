@@ -87,7 +87,7 @@ class App extends Component {
         });
         break;
       default:
-        this.setState({ video: "/video/small.mp4" }, () => {
+        this.setState({ video: "/video/gioco-1.mp4" }, () => {
           this.setState({ open: true });
         });
     }

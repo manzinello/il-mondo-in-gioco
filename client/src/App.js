@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 
-import { Grommet, Box, Video, Layer, Heading } from "grommet";
+import { Grommet, Box, Video, Layer, Button } from "grommet";
+import { LinkPrevious } from "grommet-icons";
 import MondoBox from "./components/MondoBox";
+
+import "./App.css";
 
 /*
 import io from "socket.io-client";
@@ -114,8 +117,8 @@ class App extends Component {
             <Layer
               position="center"
               modal
+              full
               margin="none"
-              onClickOutside={this.onClose}
               onEsc={this.onClose}
             >
               <Box
@@ -132,6 +135,13 @@ class App extends Component {
                 <Video loop={true} controls={false} autoPlay={true}>
                   <source src={this.state.video} type="video/mp4" />
                 </Video>
+                <Button
+                  icon={<LinkPrevious color="white" />}
+                  primary
+                  color="neutral-4"
+                  label="Torna indietro"
+                  onClick={this.onClose}
+                />
               </Box>
             </Layer>
           )}

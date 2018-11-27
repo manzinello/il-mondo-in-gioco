@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Grommet, Box, Video, Layer, Button, Heading } from "grommet";
-import { LinkPrevious, Globe, Share } from "grommet-icons";
+import { LinkPrevious, Share } from "grommet-icons";
 import MondoBox from "./components/MondoBox";
 
 import "./App.css";

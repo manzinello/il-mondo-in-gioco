@@ -60,37 +60,37 @@ class App extends Component {
   switchVideo = num => {
     switch (num) {
       case 1:
-        this.setState({ video: "/video/gioco-1.mp4" }, () => {
+        this.setState({ video: "./video/gioco-1.mp4" }, () => {
           this.setState({ open: true });
         });
         break;
       case 2:
-        this.setState({ video: "/video/gioco-2.mp4" }, () => {
+        this.setState({ video: "./video/gioco-2.mp4" }, () => {
           this.setState({ open: true });
         });
         break;
       case 3:
-        this.setState({ video: "/video/gioco-3.mp4" }, () => {
+        this.setState({ video: "./video/gioco-3.mp4" }, () => {
           this.setState({ open: true });
         });
         break;
       case 4:
-        this.setState({ video: "/video/gioco-4.mp4" }, () => {
+        this.setState({ video: "./video/gioco-4.mp4" }, () => {
           this.setState({ open: true });
         });
         break;
       case 5:
-        this.setState({ video: "/video/gioco-5.mp4" }, () => {
+        this.setState({ video: "./video/gioco-5.mp4" }, () => {
           this.setState({ open: true });
         });
         break;
       case 6:
-        this.setState({ video: "/video/gioco-6.mp4" }, () => {
+        this.setState({ video: "./video/gioco-6.mp4" }, () => {
           this.setState({ open: true });
         });
         break;
       default:
-        this.setState({ video: "/video/gioco-1.mp4" }, () => {
+        this.setState({ video: "./video/gioco-1.mp4" }, () => {
           this.setState({ open: true });
         });
     }

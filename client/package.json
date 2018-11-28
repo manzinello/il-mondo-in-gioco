@@ -2,6 +2,7 @@
   "name": "ilmondoingioco-client",
   "version": "1.0.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "grommet": "^2.0.1",
     "grommet-icons": "^3.2.1",

@@ -1,5 +1,5 @@
 # 📹 Il Mondo in Gioco
 
-https://ilmondoingioco.netlify.com
+https://ilmondoingioco.betharram.it
 
 Creato con React, (Express, socket.io), Grommet

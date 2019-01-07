@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://ilmondoingioco.netlify.com/*"
+  to = "https://ilmondoingioco.betharram.it/:splat"
+  status = 301
+  force = true

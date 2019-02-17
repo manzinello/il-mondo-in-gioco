@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/manzinello/ilmondoingioco-video-dashboard/issues"
   },
-  "homepage": "https://github.com/manzinello/ilmondoingioco-video-dashboard#readme",
+  "homepage": "./",
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",

@@ -1,3 +1,9 @@
+body,
+body div,
+body a {
+  cursor: url("/images/game-die.png"), auto !important;
+}
+
 button {
   color: white !important;
   width: 20%;
